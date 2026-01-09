@@ -85,7 +85,7 @@
             padding: 12px;
         }
 
-        /* ===== JUEGO ===== */
+        /* ===== JUEGO 1 ===== */
         #juego {
             text-align: center;
         }
@@ -119,6 +119,37 @@
             margin-top: 10px;
             font-size: 18px;
         }
+
+        /* ===== JUEGO 2 ===== */
+        #quiz {
+            text-align: center;
+        }
+
+        .opciones button {
+            padding: 12px 18px;
+            margin: 6px;
+            border-radius: 10px;
+            border: none;
+            background-color: #3498DB;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .opciones button:hover {
+            background-color: #2980B9;
+        }
+
+        #resultado-quiz {
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        #puntaje-quiz {
+            margin-top: 10px;
+            font-size: 18px;
+        }
     </style>
 </head>
 
@@ -134,19 +165,14 @@
     <a href="#alimentacion">Alimentación</a>
     <a href="#salud">Salud</a>
     <a href="#juego">Juego</a>
+    <a href="#quiz">Quiz</a>
 </nav>
 
 <div class="contenedor">
 
     <section class="tarjeta" id="cuidado">
         <h2>🐾 Consejos de Cuidado</h2>
-        <p>Además de cubrir sus necesidades básicas, el cuidado de las mascotas implica responsabilidad, compromiso y respeto hacia los animales...</p>
-        <ul>
-            <li>Brinda amor y atención.</li>
-            <li>Mantén limpio su espacio.</li>
-            <li>Sácalo a pasear diariamente.</li>
-            <li>Respeta su descanso.</li>
-        </ul>
+        <p>El cuidado de las mascotas implica responsabilidad, respeto y compromiso diario para garantizar su bienestar.</p>
         <div class="imagenes">
             <img src="cuidado1.jpg">
             <img src="cuidado2.jpg">
@@ -155,13 +181,7 @@
 
     <section class="tarjeta" id="alimentacion">
         <h2>🍖 Consejos de Alimentación</h2>
-        <p>La alimentación adecuada es esencial para el crecimiento y la salud de las mascotas...</p>
-        <ul>
-            <li>Alimento según su edad.</li>
-            <li>No dar comida humana.</li>
-            <li>Agua limpia.</li>
-            <li>Horarios fijos.</li>
-        </ul>
+        <p>Una alimentación balanceada es clave para mantener a las mascotas sanas y activas.</p>
         <div class="imagenes">
             <img src="alimentacion1.jpg">
             <img src="alimentacion2.jpg">
@@ -170,13 +190,7 @@
 
     <section class="tarjeta" id="salud">
         <h2>❤️ Consejos de Salud</h2>
-        <p>La salud de las mascotas depende del cuidado preventivo y visitas al veterinario...</p>
-        <ul>
-            <li>Vacunas completas.</li>
-            <li>Buena higiene.</li>
-            <li>Control veterinario.</li>
-            <li>Observar cambios.</li>
-        </ul>
+        <p>Las visitas al veterinario y la higiene ayudan a prevenir enfermedades.</p>
         <div class="imagenes">
             <img src="salud1.jpg">
             <img src="salud2.jpg">
@@ -198,21 +212,30 @@
             allowfullscreen></iframe>
     </div>
 
-    <!-- ===== JUEGO ===== -->
+    <!-- JUEGO 1 -->
     <section class="tarjeta" id="juego">
         <h2>🎮 Juego: Cuida a tu mascota</h2>
-        <p>Haz clic en las acciones para cuidar a tu mascota 🐶</p>
-
         <div class="mascota">🐶</div>
-
         <div class="botones-juego">
             <button onclick="accion('comida')">🍖 Dar comida</button>
             <button onclick="accion('agua')">💧 Dar agua</button>
             <button onclick="accion('amor')">❤️ Dar cariño</button>
         </div>
-
         <p id="mensaje-juego"></p>
         <p id="puntos-juego">Puntos: 0</p>
+    </section>
+
+    <!-- JUEGO 2 -->
+    <section class="tarjeta" id="quiz">
+        <h2>🎮 Quiz Mascotero</h2>
+        <h3>¿Qué necesita un perro todos los días?</h3>
+        <div class="opciones">
+            <button onclick="responder(false)">🍕 Pizza</button>
+            <button onclick="responder(true)">🍖 Comida y agua</button>
+            <button onclick="responder(false)">🍬 Dulces</button>
+        </div>
+        <p id="resultado-quiz"></p>
+        <p id="puntaje-quiz">Puntaje: 0</p>
     </section>
 
 </div>
@@ -223,6 +246,7 @@
 
 <script>
 let puntos = 0;
+let puntaje = 0;
 
 function accion(tipo) {
     let mensaje = document.getElementById("mensaje-juego");
@@ -241,10 +265,27 @@ function accion(tipo) {
     puntos += 10;
     document.getElementById("puntos-juego").innerHTML = "Puntos: " + puntos;
 }
+
+function responder(correcto) {
+    let resultado = document.getElementById("resultado-quiz");
+
+    if (correcto) {
+        resultado.innerHTML = "✅ ¡Correcto!";
+        resultado.style.color = "green";
+        puntaje += 10;
+    } else {
+        resultado.innerHTML = "❌ Incorrecto";
+        resultado.style.color = "red";
+    }
+
+    document.getElementById("puntaje-quiz").innerHTML = "Puntaje: " + puntaje;
+}
 </script>
 
 </body>
 </html>
+
+
 
 
 
