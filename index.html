@@ -85,173 +85,27 @@
             padding: 12px;
         }
 
-        /* ===== JUEGOS ===== */
-        #juego-mascota, #quiz {
+        /* ===== JUEGO MEMORIA ===== */
+        #memoria {
             text-align: center;
         }
 
-        #juego-mascota button {
-            padding: 15px 25px;
-            font-size: 18px;
-            background-color: #27AE60;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
+        .tablero {
+            display: grid;
+            grid-template-columns: repeat(4, 80px);
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
         }
 
-        #juego-mascota button:hover {
-            background-color: #1E8449;
-        }
+        .carta {
+            width: 80px;
+            height: 80px;
+            background-color: #34495E;
+            color: transparent;
+            font-size
 
-        .opciones button {
-            padding: 12px 18px;
-            margin: 6px;
-            border-radius: 10px;
-            border: none;
-            background-color: #3498DB;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-        }
 
-        .opciones button:hover {
-            background-color: #2980B9;
-        }
-    </style>
-</head>
-
-<body>
-
-<header>
-    <h1>MASCOTAS FELICES</h1>
-    <p>Diseñar una página web para dueños de mascotas que ofrece consejos de cuidado, alimentación y salud para sus animales</p>
-</header>
-
-<nav>
-    <a href="#cuidado">Cuidado</a>
-    <a href="#alimentacion">Alimentación</a>
-    <a href="#salud">Salud</a>
-</nav>
-
-<div class="contenedor">
-
-<section class="tarjeta" id="cuidado">
-<h2>🐾 Consejos de Cuidado</h2>
-<p>Además de cubrir sus necesidades básicas, el cuidado de las mascotas implica responsabilidad, compromiso y respeto hacia los animales...</p>
-<ul>
-<li>Características del cuidado adecuado:</li>
-<li>Brinda amor y atención.</li>
-<li>Mantén limpio su espacio.</li>
-<li>Sácalo a pasear diariamente.</li>
-<li>Respeta su descanso.</li>
-</ul>
-<div class="imagenes">
-<img src="cuidado1.jpg">
-<img src="cuidado2.jpg">
-</div>
-</section>
-
-<section class="tarjeta" id="alimentacion">
-<h2>🍖 Consejos de Alimentación</h2>
-<p>La alimentación adecuada es esencial para el crecimiento, desarrollo y mantenimiento de la salud de las mascotas...</p>
-<ul>
-<li>Características de una buena alimentación:</li>
-<li>Alimento según su edad y tamaño.</li>
-<li>No dar comida humana.</li>
-<li>Agua limpia siempre.</li>
-<li>Horarios fijos.</li>
-</ul>
-<div class="imagenes">
-<img src="alimentacion1.jpg">
-<img src="alimentacion2.jpg">
-</div>
-</section>
-
-<section class="tarjeta" id="salud">
-<h2>❤️ Consejos de Salud</h2>
-<p>La salud de las mascotas no solo depende de la ausencia de enfermedades...</p>
-<ul>
-<li>Características de una buena salud:</li>
-<li>Visitas regulares al veterinario.</li>
-<li>Vacunas completas.</li>
-<li>Buena higiene.</li>
-<li>Observar cambios de conducta.</li>
-</ul>
-<div class="imagenes">
-<img src="salud1.jpg">
-<img src="salud2.jpg">
-</div>
-</section>
-
-<div class="video-container">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hnmlon-vagE" allowfullscreen></iframe>
-</div>
-
-<div class="video-container">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xKScvUYfx2k" allowfullscreen></iframe>
-</div>
-
-<!-- JUEGO 1 -->
-<section class="tarjeta" id="juego-mascota">
-<h2>🎮 Juego: Cuida a tu Mascota</h2>
-<button onclick="cuidarMascota()">🐾 Cuidar Mascota</button>
-<p id="contador-cuidado">Cuidados realizados: 0</p>
-</section>
-
-<!-- JUEGO 2 -->
-<section class="tarjeta" id="quiz">
-<h2>🎮 Quiz Mascotero</h2>
-<p id="pregunta-quiz"></p>
-<div class="opciones">
-<button onclick="responderQuiz(0)"></button>
-<button onclick="responderQuiz(1)"></button>
-<button onclick="responderQuiz(2)"></button>
-</div>
-<p id="resultado-quiz"></p>
-<p id="puntaje-quiz">Puntaje: 0</p>
-</section>
-
-</div>
-
-<footer>
-<p>© 2025 Mascotas Felices | Proyecto Escolar</p>
-</footer>
-
-<script>
-let cuidados = 0;
-function cuidarMascota() {
-cuidados++;
-document.getElementById("contador-cuidado").innerHTML = "Cuidados realizados: " + cuidados;
-}
-
-let preguntas = [
-{texto:"¿Qué necesita un perro todos los días?", opciones:["🍕 Pizza","🍖 Comida y agua","🍬 Dulces"], correcta:1},
-{texto:"¿Cada cuánto ir al veterinario?", opciones:["Nunca","Regularmente","Solo cuando juega"], correcta:1},
-{texto:"¿Qué es importante para la salud?", opciones:["Dulces","Vacunas","No bañarlo"], correcta:1}
-];
-
-let i = 0, puntaje = 0;
-
-function mostrarPregunta(){
-let p = preguntas[i];
-document.getElementById("pregunta-quiz").innerHTML = p.texto;
-document.querySelectorAll(".opciones button").forEach((b,n)=>b.innerHTML=p.opciones[n]);
-}
-
-function responderQuiz(o){
-if(o===preguntas[i].correcta){puntaje+=10;}
-document.getElementById("puntaje-quiz").innerHTML="Puntaje: "+puntaje;
-i++;
-if(i<preguntas.length){mostrarPregunta();}else{
-document.getElementById("pregunta-quiz").innerHTML="🎉 Quiz terminado";
-}
-}
-mostrarPregunta();
-</script>
-
-</body>
-</html>
 
 
 
