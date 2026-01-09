@@ -103,7 +103,171 @@
             height: 80px;
             background-color: #34495E;
             color: transparent;
-            font-size
+            font-size: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .carta.volteada {
+            background-color: #F1C40F;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>MASCOTAS FELICES</h1>
+    <p>Diseñar una página web para dueños de mascotas que ofrece consejos de cuidado, alimentación y salud para sus animales</p>
+</header>
+
+<nav>
+    <a href="#cuidado">Cuidado</a>
+    <a href="#alimentacion">Alimentación</a>
+    <a href="#salud">Salud</a>
+</nav>
+
+<div class="contenedor">
+
+<section class="tarjeta" id="cuidado">
+    <h2>🐾 Consejos de Cuidado</h2>
+    <p>Además de cubrir sus necesidades básicas, el cuidado de las mascotas implica responsabilidad, compromiso y respeto hacia los animales...</p>
+    <ul>
+        <li>Características del cuidado adecuado:</li>
+        <li>Brinda amor y atención.</li>
+        <li>Mantén limpio su espacio.</li>
+        <li>Sácalo a pasear diariamente.</li>
+        <li>Respeta su descanso.</li>
+    </ul>
+    <div class="imagenes">
+        <img src="cuidado1.jpg">
+        <img src="cuidado2.jpg">
+    </div>
+</section>
+
+<section class="tarjeta" id="alimentacion">
+    <h2>🍖 Consejos de Alimentación</h2>
+    <p>La alimentación adecuada es esencial para el crecimiento, desarrollo y mantenimiento de la salud de las mascotas...</p>
+    <ul>
+        <li>Características de una buena alimentación:</li>
+        <li>Alimento según su edad y tamaño.</li>
+        <li>No dar comida humana.</li>
+        <li>Agua limpia siempre.</li>
+        <li>Horarios fijos.</li>
+    </ul>
+    <div class="imagenes">
+        <img src="alimentacion1.jpg">
+        <img src="alimentacion2.jpg">
+    </div>
+</section>
+
+<section class="tarjeta" id="salud">
+    <h2>❤️ Consejos de Salud</h2>
+    <p>La salud de las mascotas no solo depende de la ausencia de enfermedades...</p>
+    <ul>
+        <li>Características de una buena salud:</li>
+        <li>Visitas regulares al veterinario.</li>
+        <li>Vacunas completas.</li>
+        <li>Buena higiene.</li>
+        <li>Observar cambios de conducta.</li>
+    </ul>
+    <div class="imagenes">
+        <img src="salud1.jpg">
+        <img src="salud2.jpg">
+    </div>
+</section>
+
+<div class="video-container">
+    <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/hnmlon-vagE"
+        allowfullscreen>
+    </iframe>
+</div>
+
+<div class="video-container">
+    <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/xKScvUYfx2k"
+        allowfullscreen>
+    </iframe>
+</div>
+
+<!-- 🎮 JUEGO BACÁN -->
+<section class="tarjeta" id="memoria">
+    <h2>🎮 Juego: Memoria Mascotera</h2>
+    <p>Encuentra las parejas de mascotas 🐾</p>
+
+    <div class="tablero">
+        <div class="carta" onclick="voltearCarta(this)">🐶</div>
+        <div class="carta" onclick="voltearCarta(this)">🐱</div>
+        <div class="carta" onclick="voltearCarta(this)">🐶</div>
+        <div class="carta" onclick="voltearCarta(this)">🐱</div>
+
+        <div class="carta" onclick="voltearCarta(this)">🐰</div>
+        <div class="carta" onclick="voltearCarta(this)">🐹</div>
+        <div class="carta" onclick="voltearCarta(this)">🐰</div>
+        <div class="carta" onclick="voltearCarta(this)">🐹</div>
+    </div>
+
+    <p id="mensaje-memoria"></p>
+</section>
+
+</div>
+
+<footer>
+    <p>© 2025 Mascotas Felices | Proyecto Escolar</p>
+</footer>
+
+<script>
+let primera = null;
+let segunda = null;
+let bloqueado = false;
+let parejas = 0;
+
+function voltearCarta(carta) {
+    if (bloqueado || carta.classList.contains("volteada")) return;
+
+    carta.classList.add("volteada");
+
+    if (!primera) {
+        primera = carta;
+    } else {
+        segunda = carta;
+        bloqueado = true;
+
+        if (primera.innerHTML === segunda.innerHTML) {
+            parejas++;
+            resetear();
+
+            if (parejas === 4) {
+                document.getElementById("mensaje-memoria").innerHTML =
+                    "🎉 ¡Ganaste! Encontraste todas las parejas 🏆";
+            }
+        } else {
+            setTimeout(() => {
+                primera.classList.remove("volteada");
+                segunda.classList.remove("volteada");
+                resetear();
+            }, 1000);
+        }
+    }
+}
+
+function resetear() {
+    primera = null;
+    segunda = null;
+    bloqueado = false;
+}
+</script>
+
+</body>
+</html>
+
+
 
 
 
