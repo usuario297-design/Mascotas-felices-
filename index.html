@@ -85,42 +85,7 @@
             padding: 12px;
         }
 
-        /* ===== JUEGO 1 ===== */
-        #juego {
-            text-align: center;
-        }
-
-        .mascota {
-            font-size: 80px;
-            margin: 20px 0;
-        }
-
-        .botones-juego button {
-            padding: 12px 18px;
-            margin: 6px;
-            border-radius: 10px;
-            border: none;
-            background-color: #1ABC9C;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .botones-juego button:hover {
-            background-color: #16A085;
-        }
-
-        #mensaje-juego {
-            margin-top: 15px;
-            font-weight: bold;
-        }
-
-        #puntos-juego {
-            margin-top: 10px;
-            font-size: 18px;
-        }
-
-        /* ===== JUEGO 2 ===== */
+        /* QUIZ */
         #quiz {
             text-align: center;
         }
@@ -164,7 +129,6 @@
     <a href="#cuidado">Cuidado</a>
     <a href="#alimentacion">Alimentación</a>
     <a href="#salud">Salud</a>
-    <a href="#juego">Juego</a>
     <a href="#quiz">Quiz</a>
 </nav>
 
@@ -172,7 +136,18 @@
 
     <section class="tarjeta" id="cuidado">
         <h2>🐾 Consejos de Cuidado</h2>
-        <p>El cuidado de las mascotas implica responsabilidad, respeto y compromiso diario para garantizar su bienestar.</p>
+        <p>
+Además de cubrir sus necesidades básicas, el cuidado de las mascotas implica responsabilidad, compromiso y respeto hacia los animales. Un buen cuidado contribuye a que la mascota tenga una vida larga, activa y feliz. Esto incluye brindar un ambiente adecuado, protección frente a peligros, socialización y una educación basada en el respeto. El cuidado diario fortalece el vínculo entre la mascota y su dueño, generando confianza y bienestar emocional.
+
+El entorno donde vive la mascota debe ser seguro, limpio y cómodo. Es importante evitar objetos peligrosos, mantener una temperatura adecuada y garantizar espacios donde el animal pueda descansar tranquilamente. Asimismo, el ejercicio regular ayuda a prevenir el estrés, la obesidad y problemas de comportamiento, mejorando su salud física y mental.
+        </p>
+        <ul>
+            <li>Características del cuidado adecuado:</li>
+            <li>Brinda amor y atención.</li>
+            <li>Mantén limpio su espacio.</li>
+            <li>Sácalo a pasear diariamente.</li>
+            <li>Respeta su descanso.</li>
+        </ul>
         <div class="imagenes">
             <img src="cuidado1.jpg">
             <img src="cuidado2.jpg">
@@ -181,7 +156,18 @@
 
     <section class="tarjeta" id="alimentacion">
         <h2>🍖 Consejos de Alimentación</h2>
-        <p>Una alimentación balanceada es clave para mantener a las mascotas sanas y activas.</p>
+        <p>
+La alimentación adecuada es esencial para el crecimiento, desarrollo y mantenimiento de la salud de las mascotas. Cada animal tiene necesidades nutricionales específicas según su especie, raza, edad y nivel de actividad. Una dieta balanceada proporciona los nutrientes necesarios como proteínas, vitaminas, minerales y energía, los cuales permiten el correcto funcionamiento del organismo.
+
+Una mala alimentación puede provocar enfermedades como obesidad, desnutrición, problemas digestivos o debilidad del sistema inmunológico. Por ello, es fundamental seleccionar alimentos de buena calidad y evitar productos que puedan ser tóxicos para los animales. La hidratación también es clave, ya que el agua participa en múltiples funciones vitales del cuerpo.
+        </p>
+        <ul>
+            <li>Características de una buena alimentación:</li>
+            <li>Alimento según su edad y tamaño.</li>
+            <li>No dar comida humana.</li>
+            <li>Agua limpia siempre.</li>
+            <li>Horarios fijos.</li>
+        </ul>
         <div class="imagenes">
             <img src="alimentacion1.jpg">
             <img src="alimentacion2.jpg">
@@ -190,7 +176,18 @@
 
     <section class="tarjeta" id="salud">
         <h2>❤️ Consejos de Salud</h2>
-        <p>Las visitas al veterinario y la higiene ayudan a prevenir enfermedades.</p>
+        <p>
+La salud de las mascotas no solo depende de la ausencia de enfermedades, sino también del bienestar físico y emocional. El cuidado preventivo es fundamental para detectar problemas a tiempo y evitar complicaciones graves. Las visitas periódicas al veterinario permiten controlar el crecimiento, aplicar vacunas y desparasitar correctamente a los animales.
+
+Además, la higiene juega un papel importante en la prevención de infecciones. El baño, el cepillado y la limpieza de oídos y dientes ayudan a mantener a la mascota sana. Observar cambios en el comportamiento, apetito o energía puede ser una señal temprana de enfermedad y debe ser atendida de inmediato.
+        </p>
+        <ul>
+            <li>Características de una buena salud:</li>
+            <li>Visitas regulares al veterinario.</li>
+            <li>Vacunas completas.</li>
+            <li>Buena higiene.</li>
+            <li>Observar cambios de conducta.</li>
+        </ul>
         <div class="imagenes">
             <img src="salud1.jpg">
             <img src="salud2.jpg">
@@ -212,28 +209,17 @@
             allowfullscreen></iframe>
     </div>
 
-    <!-- JUEGO 1 -->
-    <section class="tarjeta" id="juego">
-        <h2>🎮 Juego: Cuida a tu mascota</h2>
-        <div class="mascota">🐶</div>
-        <div class="botones-juego">
-            <button onclick="accion('comida')">🍖 Dar comida</button>
-            <button onclick="accion('agua')">💧 Dar agua</button>
-            <button onclick="accion('amor')">❤️ Dar cariño</button>
-        </div>
-        <p id="mensaje-juego"></p>
-        <p id="puntos-juego">Puntos: 0</p>
-    </section>
-
-    <!-- JUEGO 2 -->
+    <!-- QUIZ -->
     <section class="tarjeta" id="quiz">
         <h2>🎮 Quiz Mascotero</h2>
-        <h3>¿Qué necesita un perro todos los días?</h3>
+        <p id="pregunta-quiz"></p>
+
         <div class="opciones">
-            <button onclick="responder(false)">🍕 Pizza</button>
-            <button onclick="responder(true)">🍖 Comida y agua</button>
-            <button onclick="responder(false)">🍬 Dulces</button>
+            <button onclick="responderQuiz(0)"></button>
+            <button onclick="responderQuiz(1)"></button>
+            <button onclick="responderQuiz(2)"></button>
         </div>
+
         <p id="resultado-quiz"></p>
         <p id="puntaje-quiz">Puntaje: 0</p>
     </section>
@@ -245,45 +231,68 @@
 </footer>
 
 <script>
-let puntos = 0;
-let puntaje = 0;
-
-function accion(tipo) {
-    let mensaje = document.getElementById("mensaje-juego");
-
-    if (tipo === "comida") {
-        mensaje.innerHTML = "🍖 ¡Tu mascota está bien alimentada!";
-        mensaje.style.color = "green";
-    } else if (tipo === "agua") {
-        mensaje.innerHTML = "💧 ¡Tu mascota está bien hidratada!";
-        mensaje.style.color = "blue";
-    } else {
-        mensaje.innerHTML = "❤️ ¡Tu mascota está feliz!";
-        mensaje.style.color = "red";
+let preguntas = [
+    {
+        texto: "¿Qué necesita un perro todos los días?",
+        opciones: ["🍕 Pizza", "🍖 Comida y agua", "🍬 Dulces"],
+        correcta: 1
+    },
+    {
+        texto: "¿Por qué es importante llevar a la mascota al veterinario?",
+        opciones: ["🎮 Para jugar", "💉 Para prevenir enfermedades", "🍭 Para darle dulces"],
+        correcta: 1
+    },
+    {
+        texto: "¿Qué ayuda a mantener sana a una mascota?",
+        opciones: ["🛁 Higiene y vacunas", "🍟 Comida chatarra", "📺 Ver TV"],
+        correcta: 0
     }
+];
 
-    puntos += 10;
-    document.getElementById("puntos-juego").innerHTML = "Puntos: " + puntos;
+let indice = 0;
+let puntajeQuiz = 0;
+
+function mostrarPregunta() {
+    let p = preguntas[indice];
+    document.getElementById("pregunta-quiz").innerHTML = p.texto;
+
+    let botones = document.querySelectorAll(".opciones button");
+    botones.forEach((btn, i) => {
+        btn.innerHTML = p.opciones[i];
+    });
 }
 
-function responder(correcto) {
+function responderQuiz(opcion) {
     let resultado = document.getElementById("resultado-quiz");
 
-    if (correcto) {
+    if (opcion === preguntas[indice].correcta) {
         resultado.innerHTML = "✅ ¡Correcto!";
         resultado.style.color = "green";
-        puntaje += 10;
+        puntajeQuiz += 10;
     } else {
         resultado.innerHTML = "❌ Incorrecto";
         resultado.style.color = "red";
     }
 
-    document.getElementById("puntaje-quiz").innerHTML = "Puntaje: " + puntaje;
+    document.getElementById("puntaje-quiz").innerHTML =
+        "Puntaje: " + puntajeQuiz;
+
+    indice++;
+
+    if (indice < preguntas.length) {
+        setTimeout(mostrarPregunta, 1000);
+    } else {
+        resultado.innerHTML = "🎉 ¡Terminaste el quiz!";
+    }
 }
+
+mostrarPregunta();
 </script>
 
 </body>
 </html>
+
+
 
 
 
