@@ -7,12 +7,12 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #ECF0F1; /* color suave */
+            background-color: #ECF0F1;
             margin: 0;
         }
 
         header {
-            background-color: #2C3E50; /* color fuerte */
+            background-color: #2C3E50;
             color: white;
             text-align: center;
             padding: 30px;
@@ -84,6 +84,41 @@
             text-align: center;
             padding: 12px;
         }
+
+        /* ===== JUEGO ===== */
+        #juego {
+            text-align: center;
+        }
+
+        .mascota {
+            font-size: 80px;
+            margin: 20px 0;
+        }
+
+        .botones-juego button {
+            padding: 12px 18px;
+            margin: 6px;
+            border-radius: 10px;
+            border: none;
+            background-color: #1ABC9C;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .botones-juego button:hover {
+            background-color: #16A085;
+        }
+
+        #mensaje-juego {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        #puntos-juego {
+            margin-top: 10px;
+            font-size: 18px;
+        }
     </style>
 </head>
 
@@ -91,96 +126,94 @@
 
 <header>
     <h1>MASCOTAS FELICES</h1>
-       <p>Diseñar una página web para dueños de mascotas que ofrece consejos de cuidado, alimentación y salud para sus animales</p>
+    <p>Diseñar una página web para dueños de mascotas que ofrece consejos de cuidado, alimentación y salud para sus animales</p>
 </header>
 
 <nav>
     <a href="#cuidado">Cuidado</a>
     <a href="#alimentacion">Alimentación</a>
     <a href="#salud">Salud</a>
+    <a href="#juego">Juego</a>
 </nav>
 
 <div class="contenedor">
 
     <section class="tarjeta" id="cuidado">
         <h2>🐾 Consejos de Cuidado</h2>
-        <p>Además de cubrir sus necesidades básicas, el cuidado de las mascotas implica responsabilidad, compromiso y respeto hacia los animales. Un buen cuidado contribuye a que la mascota tenga una vida larga, activa y feliz. Esto incluye brindar un ambiente adecuado, protección frente a peligros, socialización y una educación basada en el respeto. El cuidado diario fortalece el vínculo entre la mascota y su dueño, generando confianza y bienestar emocional.
-
-El entorno donde vive la mascota debe ser seguro, limpio y cómodo. Es importante evitar objetos peligrosos, mantener una temperatura adecuada y garantizar espacios donde el animal pueda descansar tranquilamente. Asimismo, el ejercicio regular ayuda a prevenir el estrés, la obesidad y problemas de comportamiento, mejorando su salud física y mental. </p>
+        <p>Además de cubrir sus necesidades básicas, el cuidado de las mascotas implica responsabilidad, compromiso y respeto hacia los animales...</p>
         <ul>
-<li>Características del cuidado adecuado:</li>
             <li>Brinda amor y atención.</li>
             <li>Mantén limpio su espacio.</li>
             <li>Sácalo a pasear diariamente.</li>
             <li>Respeta su descanso.</li>
         </ul>
         <div class="imagenes">
-            <img src="cuidado1.jpg" alt="Cuidado de mascotas">
-            <img src="cuidado2.jpg" alt="Bienestar animal">
+            <img src="cuidado1.jpg">
+            <img src="cuidado2.jpg">
         </div>
     </section>
 
     <section class="tarjeta" id="alimentacion">
         <h2>🍖 Consejos de Alimentación</h2>
-        <p>
-         La alimentación adecuada es esencial para el crecimiento, desarrollo y mantenimiento de la salud de las mascotas. Cada animal tiene necesidades nutricionales específicas según su especie, raza, edad y nivel de actividad. Una dieta balanceada proporciona los nutrientes necesarios como proteínas, vitaminas, minerales y energía, los cuales permiten el correcto funcionamiento del organismo.
-
-Una mala alimentación puede provocar enfermedades como obesidad, desnutrición, problemas digestivos o debilidad del sistema inmunológico. Por ello, es fundamental seleccionar alimentos de buena calidad y evitar productos que puedan ser tóxicos para los animales. La hidratación también es clave, ya que el agua participa en múltiples funciones vitales del cuerpo.</p>
+        <p>La alimentación adecuada es esencial para el crecimiento y la salud de las mascotas...</p>
         <ul>
-<li>Características de una buena alimentación:</li>
-            <li>Alimento según su edad y tamaño.</li>
+            <li>Alimento según su edad.</li>
             <li>No dar comida humana.</li>
-            <li>Agua limpia siempre.</li>
+            <li>Agua limpia.</li>
             <li>Horarios fijos.</li>
         </ul>
         <div class="imagenes">
-            <img src="alimentacion1.jpg" alt="Alimentación de mascotas">
-            <img src="alimentacion2.jpg" alt="Comida saludable">
+            <img src="alimentacion1.jpg">
+            <img src="alimentacion2.jpg">
         </div>
     </section>
 
     <section class="tarjeta" id="salud">
         <h2>❤️ Consejos de Salud</h2>
-        <p>
-           La salud de las mascotas no solo depende de la ausencia de enfermedades, sino también del bienestar físico y emocional. El cuidado preventivo es fundamental para detectar problemas a tiempo y evitar complicaciones graves. Las visitas periódicas al veterinario permiten controlar el crecimiento, aplicar vacunas y desparasitar correctamente a los animales.
-
-Además, la higiene juega un papel importante en la prevención de infecciones. El baño, el cepillado y la limpieza de oídos y dientes ayudan a mantener a la mascota sana. Observar cambios en el comportamiento, apetito o energía puede ser una señal temprana de enfermedad y debe ser atendida de inmediato.</p>
+        <p>La salud de las mascotas depende del cuidado preventivo y visitas al veterinario...</p>
         <ul>
-<li>Características de una buena salud:</li>
-            <li>Visitas regulares al veterinario.</li>
             <li>Vacunas completas.</li>
             <li>Buena higiene.</li>
-            <li>Observar cambios de conducta.</li>
+            <li>Control veterinario.</li>
+            <li>Observar cambios.</li>
         </ul>
         <div class="imagenes">
-            <img src="salud1.jpg" alt="Salud animal">
-            <img src="salud2.jpg" alt="Veterinario">
+            <img src="salud1.jpg">
+            <img src="salud2.jpg">
         </div>
     </section>
 
-    <!-- VIDEO 1 -->
+    <!-- VIDEOS -->
     <div class="video-container">
         <h2>🎥 Video: Cuidado responsable de las mascotas</h2>
         <iframe width="560" height="315"
             src="https://www.youtube.com/embed/hnmlon-vagE"
-            title="Cuidado de mascotas"
-            frameborder="0"
-            allowfullscreen>
-        </iframe>
+            allowfullscreen></iframe>
     </div>
 
-    <!-- VIDEO 2 -->
-<div class="video-container">
-    <h2>🎥 Video: Amar y respetar a los animales</h2>
-    <iframe width="560" height="315"
-        src="https://www.youtube.com/embed/xKScvUYfx2k"
-        title="Respeto a los animales"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-    </iframe>
-</div>
+    <div class="video-container">
+        <h2>🎥 Video: Amar y respetar a los animales</h2>
+        <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/xKScvUYfx2k"
+            allowfullscreen></iframe>
+    </div>
 
+    <!-- ===== JUEGO ===== -->
+    <section class="tarjeta" id="juego">
+        <h2>🎮 Juego: Cuida a tu mascota</h2>
+        <p>Haz clic en las acciones para cuidar a tu mascota 🐶</p>
+
+        <div class="mascota">🐶</div>
+
+        <div class="botones-juego">
+            <button onclick="accion('comida')">🍖 Dar comida</button>
+            <button onclick="accion('agua')">💧 Dar agua</button>
+            <button onclick="accion('amor')">❤️ Dar cariño</button>
+        </div>
+
+        <p id="mensaje-juego"></p>
+        <p id="puntos-juego">Puntos: 0</p>
+    </section>
 
 </div>
 
@@ -188,8 +221,32 @@ Además, la higiene juega un papel importante en la prevención de infecciones. 
     <p>© 2025 Mascotas Felices | Proyecto Escolar</p>
 </footer>
 
+<script>
+let puntos = 0;
+
+function accion(tipo) {
+    let mensaje = document.getElementById("mensaje-juego");
+
+    if (tipo === "comida") {
+        mensaje.innerHTML = "🍖 ¡Tu mascota está bien alimentada!";
+        mensaje.style.color = "green";
+    } else if (tipo === "agua") {
+        mensaje.innerHTML = "💧 ¡Tu mascota está bien hidratada!";
+        mensaje.style.color = "blue";
+    } else {
+        mensaje.innerHTML = "❤️ ¡Tu mascota está feliz!";
+        mensaje.style.color = "red";
+    }
+
+    puntos += 10;
+    document.getElementById("puntos-juego").innerHTML = "Puntos: " + puntos;
+}
+</script>
+
 </body>
 </html>
+
+
 
 
 
